@@ -4,3 +4,7 @@
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
   <router-outlet></router-outlet>
+<div *ngFor="let hero of heroes">
+  <p>ID: {{hero?.id}}</p>
+  <p>Name: {{hero?.name}}</p>
+</div>
