@@ -1,5 +1,5 @@
-
-[
+{
+"heroes":[
   {
       "id": 1,
       "name": "Steve"
@@ -13,4 +13,4 @@
       "name": "Sergo"
     }
   ]
-
+}

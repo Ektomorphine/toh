@@ -26,7 +26,7 @@ export class HeroDetailComponentJson implements OnInit {
 
   ngOnInit(){
     this.httpService.getData()
-      .subscribe((data: Response) => this.heroes = data.json());
+      .subscribe((data: Response) => this.heroes = data.json().heroes);
   }
 
   onSelect(hero: Hero): void {
