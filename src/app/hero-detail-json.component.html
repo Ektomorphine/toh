@@ -20,8 +20,7 @@
 <h1> Add hero: </h1>
 <div>
   <form>
-    <p>ID:</p>
-    <input type="text" name="id" [(ngModel)]="hero.id"><br>
+    <input type="hidden" name="id" [(ngModel)]="hero.i"><br>
     <p>Hero name:</p>
     <input type="text" name="heroname" [(ngModel)]="hero.name">
     <p><button (click)="submit(hero)">Add</button></p>

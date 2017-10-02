@@ -30,16 +30,26 @@ export class HeroDetailComponentJson implements OnInit {
   ngOnInit(){
     this.httpService.getData()
       .subscribe((data: Response) => this.heroes = data.json().heroes);
+
   }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this.httpService.id = this.selectedHero.id;
+    this.counter();
   }
 
   goBack(): void {
   this.location.back();
-}
+  }
+
+  counter(): number {
+    let i = this.heroes.length+1;
+    console.log(i)
+    return i;
+
+  }
+
   submit(hero){
     this.httpService.postData(hero)
       .subscribe((data) => {this.receivedHero=data; this.done=true;});
