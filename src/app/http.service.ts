@@ -19,7 +19,7 @@ export class HttpService{
 
         let headers = new Headers({ 'Content-Type': 'application/json;charset=utf-8' });
 
-        return this.http.post('http://localhost:3000/db', body, { headers: headers })
+        return this.http.post('http://localhost:3000/heroes', body, { headers: headers })
                         .map((resp:Response)=>resp.json())
                         .catch((error:any) =>{return Observable.throw(error);});
     }

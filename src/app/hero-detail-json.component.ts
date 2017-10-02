@@ -20,10 +20,13 @@ import { HttpService } from './http.service';
 export class HeroDetailComponentJson implements OnInit {
   heroes: Hero[]=[];
   selectedHero: Hero;
+  hero: Hero = new Hero();
 
   constructor(private httpService: HttpService,
               private location: Location)  {}
 
+  receivedHero: Hero;
+  done: boolean = false;
   ngOnInit(){
     this.httpService.getData()
       .subscribe((data: Response) => this.heroes = data.json().heroes);
@@ -36,5 +39,9 @@ export class HeroDetailComponentJson implements OnInit {
   goBack(): void {
   this.location.back();
 }
+  submit(hero){
+    this.httpService.postData(hero)
+      .subscribe((data) => {this.receivedHero=data; this.done=true;});
+  }
 
 }

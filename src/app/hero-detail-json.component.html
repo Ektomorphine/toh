@@ -15,6 +15,22 @@
 
 </div>
 
+<h1> Add hero: </h1>
+<div>
+  <form>
+    <p>ID:</p>
+    <input type="text" name="id" [(ngModel)]="hero.id"><br>
+    <p>Hero name:</p>
+    <input type="text" name="heroname" [(ngModel)]="hero.name">
+    <p>Select photo:</p>
+    <div><input type="file" name="avatar"></div>
+    <p><button (click)="submit(hero)">Add</button></p>
+  </form>
+</div>
+<hr>
+
+
+
 <!--                                      куча ошибок
 <div class="form-group">
     <label>Возраст</label>
