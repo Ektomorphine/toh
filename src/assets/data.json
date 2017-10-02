@@ -1,0 +1,23 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Michail",
+      "photo": "./assets/img1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Michail",
+      "photo": "./assets/img2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sergo",
+      "photo": "./assets/img3.jpg"
+    },
+    {
+      "name": "Ed",
+      "id": 4
+    }
+  ]
+}

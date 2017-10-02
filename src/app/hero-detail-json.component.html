@@ -1,0 +1,36 @@
+<h1> Choose hero: </h1>
+<div>
+  <ul class="heroes">
+  <li *ngFor="let hero of heroes"
+  [class.selected]="hero === selectedHero"
+        (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span><span><img class="avatar" [src]="hero.photo"></span> {{hero.name}}
+  </li>
+</ul>
+</div>
+
+<div *ngIf="selectedHero">
+  <h1> Selected hero: {{selectedHero.name}}</h1>
+  <p>ID: {{selectedHero.id}}</p>
+  <p>Name: <input [(ngModel)]="selectedHero.name" name="name"></p>
+  <p><button (click)="edit(selectedHero)">Edit</button></p>
+  <p><button (click)="delete(selectedHero)">Remove</button></p>
+</div>
+
+<h1> Add hero: </h1>
+<div>
+  <form>
+    <input type="hidden" name="id" [(ngModel)]="hero.i"><br>
+    <p>Hero name:</p>
+    <input type="text" name="heroname" [(ngModel)]="hero.name">
+    <p><button (click)="submit(hero)">Add</button></p>
+  </form>
+</div>
+<hr>
+
+<button (click)="goBack()">Back</button>
+<div *ngIf="done">
+  <div>Получено от сервера:</div>
+  <div>Имя: {{receivedUser.name}}</div>
+  <div>Возраст: {{receivedUser.age}}</div>
+</div>
