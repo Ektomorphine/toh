@@ -2,23 +2,18 @@
   "heroes": [
     {
       "id": 1,
-      "name": "Steve"
+      "name": "Michail",
+      "photo": "./assets/img1.jpg"
     },
     {
       "id": 2,
-      "name": "Michail"
+      "name": "Michail",
+      "photo": "./assets/img2.jpg"
     },
     {
       "id": 3,
-      "name": "Sergo"
-    },
-    {
-      "id": "4",
-      "name": "HeroTest"
-    },
-    {
-      "id": "5",
-      "name": "Hero5"
+      "name": "Sergo",
+      "photo": "./assets/img3.jpg"
     }
   ]
 }

@@ -34,6 +34,7 @@ export class HeroDetailComponentJson implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+    this.httpService.id = this.selectedHero.id;
   }
 
   goBack(): void {
@@ -42,6 +43,15 @@ export class HeroDetailComponentJson implements OnInit {
   submit(hero){
     this.httpService.postData(hero)
       .subscribe((data) => {this.receivedHero=data; this.done=true;});
+  }
+  edit(hero){
+    this.httpService.putData(hero)
+      .subscribe((data) => {this.receivedHero=data; this.done=true;});
+  }
+
+  delete(hero){
+   this.httpService.delData(hero)
+      .subscribe();
   }
 
 }
